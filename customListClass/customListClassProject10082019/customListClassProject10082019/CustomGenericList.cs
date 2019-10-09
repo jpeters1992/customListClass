@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace customListClassProject10082019
 {
-    public class CustomGenericList<T> : ????<T>
+    public class CustomGenericList<T>
     {
         //MEMBER VARIABLES
         private T[] items;
