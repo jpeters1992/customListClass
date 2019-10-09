@@ -46,22 +46,6 @@ namespace CustomListsTests
         }
 
         [TestMethod]
-        public void Add_AddPositiveNumbers()
-        {
-            //ARRANGE
-            CustomGenericList<int> testList = new CustomGenericList<int>();
-            double value1 = 1;
-            double value2 = 2;
-            double result;
-
-            //ACT
-            result = testList.Calculate(value1, value2);
-
-            //ASSERT
-            Assert.AreEqual(value1 + value2, result);
-        }
-
-        [TestMethod]
         public void Add_AddMultipleItems_AccessLastItem()
         {
             //ARRANGE
@@ -82,6 +66,42 @@ namespace CustomListsTests
             Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+        public void Add_somethingSomething()
+        {
+            //ARRANGE
+            CustomGenericList<int> testList = new CustomGenericList<int>();
+            int expected = 14;
+            int actual;
+
+            //ACT 
+            testList.Add(10);
+            testList.Add(11);
+            testList.Add(12);
+            testList.Add(13);
+            testList.Add(14);
+            actual = testList[4];
+
+            //ASSERT 
+            Assert.AreEqual(expected, actual);
+        }
+
+        //[TestMethod]
+        //public void Add_AddPositiveNumbers()
+        //{
+        //    //ARRANGE
+        //    CustomGenericList<int> testList = new CustomGenericList<int>();
+        //    int value1 = 1;
+        //    int value2 = 2;
+        //    int result;
+
+        //    //ACT
+        //    result = testList.Add(value1, value2);
+
+        //    //ASSERT
+        //    Assert.AreEqual(value1 + value2, result);
+        //}
     }
 }
             
