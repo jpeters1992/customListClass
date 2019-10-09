@@ -86,22 +86,6 @@ namespace CustomListsTests
             //ASSERT 
             Assert.AreEqual(expected, actual);
         }
-
-        //[TestMethod]
-        //public void Add_AddPositiveNumbers()
-        //{
-        //    //ARRANGE
-        //    CustomGenericList<int> testList = new CustomGenericList<int>();
-        //    int value1 = 1;
-        //    int value2 = 2;
-        //    int result;
-
-        //    //ACT
-        //    result = testList.Add(value1, value2);
-
-        //    //ASSERT
-        //    Assert.AreEqual(value1 + value2, result);
-        //}
     }
 }
             
