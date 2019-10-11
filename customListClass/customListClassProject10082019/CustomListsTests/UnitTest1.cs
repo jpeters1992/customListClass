@@ -21,7 +21,7 @@ namespace CustomListsTests
             int expected = 12;
             int actual;
 
-            //ACT 
+            ////ACT 
             testList.Add(12);
             actual = testList[0];
 
@@ -59,7 +59,6 @@ namespace CustomListsTests
                 testList.Add(5);
             }
 
-
             actual = testList.Count;
 
             //ASSERT
@@ -75,7 +74,7 @@ namespace CustomListsTests
             int expected = 14;
             int actual;
 
-            //ACT 
+            ////ACT 
             testList.Add(10);
             testList.Add(11);
             testList.Add(12);
