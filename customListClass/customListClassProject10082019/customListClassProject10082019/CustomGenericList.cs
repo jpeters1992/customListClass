@@ -9,7 +9,7 @@ namespace customListClassProject10082019
     public class CustomGenericList<T>
     {
         //MEMBER VARIABLES
-        private T[] primaryArray;
+        private T[] underlyingArray;
         public T[] GenericArrayList;
         private int count;
         public int Count { get { return count; } }
@@ -21,25 +21,24 @@ namespace customListClassProject10082019
         {
             count = 0;
             capacity = 4;
-            primaryArray = new T[capacity];
+            underlyingArray = new T[capacity];
         }
 
         //MEMBER METHODS
         public void Add(T item)
         {
-            primaryArray[count] = item;
+            underlyingArray[count] = item;
             count++;
             if(count == capacity)
             {
-                T[] tempArray = new T[primaryArray.Length + 1];
-                for (int i = 0; i < primaryArray.Length; i++)
+                T[] tempArray = new T[underlyingArray.Length + 1];
+                for (int i = 0; i < underlyingArray.Length; i++)
                 {
-                    tempArray[i] = primaryArray[i];
+                    tempArray[i] = underlyingArray[i];
                 }
-                tempArray[primaryArray.Length] = item;
-                primaryArray = tempArray;
+                tempArray[underlyingArray.Length] = item;
+                underlyingArray = tempArray;
             }
-           
         }
 
         public T this[int index]   
@@ -48,7 +47,7 @@ namespace customListClassProject10082019
             {
                 if(index >= 0 && index < count)
                 {
-                    return primaryArray[index];
+                    return underlyingArray[index];
                 }
                 else
                 {
@@ -59,7 +58,7 @@ namespace customListClassProject10082019
             {
                 if(index >=0 && index < count)
                 {
-                    primaryArray[index] = value;
+                    underlyingArray[index] = value;
                 }
                 else
                 {
@@ -75,7 +74,7 @@ namespace customListClassProject10082019
 
         public void Print()
         {
-            foreach (T item in primaryArray)
+            foreach (T item in underlyingArray)
             {
                 Console.WriteLine(item);
             }

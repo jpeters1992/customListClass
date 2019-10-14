@@ -7,12 +7,10 @@ namespace CustomListsTests
     [TestClass]
     public class CustomListUnitTests
     {
-        //ADD unit testing below
-
         //ARRANGE - setting up variables
         //ACT - actual method we're calling
         //ASSERT - what we're testing
-    
+
         [TestMethod]
         public void Add_AddToEmptyList_ItemGoesToIndexZero()
         {
@@ -46,7 +44,7 @@ namespace CustomListsTests
         }
 
         [TestMethod]
-        public void Add_AddMultipleItems_AccessLastItem()
+        public void Add_AddMultipleItems_Count()
         {
             //ARRANGE
             CustomGenericList<int> testList = new CustomGenericList<int>();
@@ -67,7 +65,7 @@ namespace CustomListsTests
         }
 
         [TestMethod]
-        public void Add_somethingSomething()
+        public void Add_AccessLastItem()
         {
             //ARRANGE
             CustomGenericList<int> testList = new CustomGenericList<int>();
@@ -81,6 +79,27 @@ namespace CustomListsTests
             testList.Add(13);
             testList.Add(14);
             actual = testList[4];
+
+            //ASSERT 
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Add_AddMultipleNumbers_CountList()
+        {
+            //ARRANGE
+            CustomGenericList<int> testList = new CustomGenericList<int>();
+            int expected = 5;
+            int actual;
+
+            //ACT 
+            testList.Add(25);
+            testList.Add(25);
+            testList.Add(25);
+            testList.Add(25);
+            testList.Add(25);
+
+            actual = testList.Count;
 
             //ASSERT 
             Assert.AreEqual(expected, actual);
